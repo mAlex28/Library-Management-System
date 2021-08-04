@@ -23,12 +23,12 @@ public class Login extends JFrame implements ActionListener, MouseListener {
         Font normalFont = new Font("Helvetica", Font.PLAIN, 14);
         Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
 
-        setTitle("Login Form");
-      setBackground(new Color(239, 233, 244));
-      setSize(800, 600);
-      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setResizable(false);
-      setLocationRelativeTo(null);
+        setTitle("Login");
+        setBackground(new Color(239, 233, 244));
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
+        setLocationRelativeTo(null);
 
         // login panel
         loginPanel = new JPanel(new GridLayout(2, 1));
