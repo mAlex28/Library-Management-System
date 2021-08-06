@@ -22,7 +22,7 @@ public class Register extends JFrame implements ActionListener, MouseListener {
         Font normalFont = new Font("Helvetica", Font.PLAIN, 14);
         Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
 
-        setTitle("Register user");
+        setTitle("Library Management System");
         setBackground(new Color(242, 242, 247));
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -90,7 +90,7 @@ public class Register extends JFrame implements ActionListener, MouseListener {
         secAField.setBounds(360, 270, 200, 30);
         secAField.setFont(normalFont);
 
-        // reset button
+        // register button
         registerBtn = new JButton("Register");
         registerBtn.setForeground(new Color(239, 233, 244));
         registerBtn.setBackground(new Color(10, 132, 255));
@@ -204,9 +204,6 @@ public class Register extends JFrame implements ActionListener, MouseListener {
             back.setForeground(new Color(19, 123, 255));
         }
 
-        if (mouseEvent.getSource() == back) {
-            back.setForeground(new Color(19, 123, 255));
-        }
     }
 
     @Override
@@ -215,8 +212,6 @@ public class Register extends JFrame implements ActionListener, MouseListener {
             back.setForeground(new Color(23, 29, 28));
         }
 
-        if (mouseEvent.getSource() == back) {
-            back.setForeground(new Color(23, 29, 28));
-        }
+
     }
 }

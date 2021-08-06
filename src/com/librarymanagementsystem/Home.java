@@ -13,7 +13,6 @@ public class Home extends JFrame implements ActionListener {
     private JLabel addBookLbl, addStuLbl, staticLbl, issueBookLbl, returnBookLbl;
 
     public Home() {
-        Font normalFont = new Font("Helvetica", Font.PLAIN, 14);
         Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
 
         setTitle("Home");
@@ -41,11 +40,11 @@ public class Home extends JFrame implements ActionListener {
         menuBar.add(detailsMenu);
 
         JMenuItem bookdetails = new JMenuItem("Book details");
-//        bookdetails.addActionListener(this);
+        bookdetails.addActionListener(this);
         detailsMenu.add(bookdetails);
 
         JMenuItem studentdetails = new JMenuItem("Student details");
-//        logout.addActionListener(this);
+        studentdetails.addActionListener(this);
         detailsMenu.add(studentdetails);
 
         // exit and logout menu
@@ -53,11 +52,11 @@ public class Home extends JFrame implements ActionListener {
         menuBar.add(exitMenu);
 
         JMenuItem logout = new JMenuItem("Logout");
-//        logout.addActionListener(this);
+        logout.addActionListener(this);
         exitMenu.add(logout);
 
         JMenuItem exit = new JMenuItem("Exit");
-//        logout.addActionListener(this);
+        exit.addActionListener(this);
         exitMenu.add(exit);
 
         JLabel label = new JLabel("Home");
@@ -164,7 +163,47 @@ public class Home extends JFrame implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent actionEvent) {
+    public void actionPerformed(ActionEvent event) {
+        if (event.getActionCommand().equals("Book details")) {
+            setVisible(false);
+//            new BookDetails().setVisible(true);
+        } else if (event.getActionCommand().equals("Student details")) {
+            setVisible(false);
+//            new StudentDetails().setVisible(true);
+        }
+
+        if (event.getActionCommand().equals("Exit")) {
+            System.exit(ABORT);
+        } else if (event.getActionCommand().equals("Logout")) {
+            setVisible(false);
+            new Login().setVisible(true);
+        }
+
+        if (event.getSource() == addBookBtn) {
+            this.setVisible(false);
+            new AddBooks().setVisible(true);
+        }
+
+        if (event.getSource() == addStuBtn) {
+//            this.setVisible(false);
+//            new AddStudents().setVisible(true);
+        }
+
+        if (event.getSource() == staticBtn) {
+            this.setVisible(false);
+            new Statistics().setVisible(true);
+        }
+
+        if (event.getSource() == issueBookBtn) {
+//            this.setVisible(false);
+//            new IssueBook().setVisible(true);
+        }
+
+        if (event.getSource() == returnBookBtn) {
+//            this.setVisible(false);
+//            new ReturnBook().setVisible(true);
+        }
+
 
     }
 
