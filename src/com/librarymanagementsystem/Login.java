@@ -1,7 +1,6 @@
 package com.librarymanagementsystem;
 
 import javax.swing.*;
-import javax.xml.transform.Result;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +8,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class Login extends JFrame implements ActionListener, MouseListener {
 
@@ -24,7 +22,7 @@ public class Login extends JFrame implements ActionListener, MouseListener {
         Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
 
         setTitle("Login");
-        setBackground(new Color(239, 233, 244));
+        setBackground(new Color(242, 242, 247));
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
@@ -32,7 +30,7 @@ public class Login extends JFrame implements ActionListener, MouseListener {
 
         // login panel
         loginPanel = new JPanel(new GridLayout(2, 1));
-        loginPanel.setBackground(new Color(239, 233, 244));
+        loginPanel.setBackground(new Color(242, 242, 247));
         setContentPane(loginPanel);
         loginPanel.setLayout(null);
 
@@ -65,10 +63,10 @@ public class Login extends JFrame implements ActionListener, MouseListener {
         // loginBtn
         loginBtn = new JButton("Login");
         loginBtn.setForeground(new Color(239, 233, 244));
-        loginBtn.setBackground(new Color(88, 99, 248));
+        loginBtn.setBackground(new Color(10, 132, 255));
         loginBtn.setOpaque(true);
         loginBtn.setBorderPainted(false);
-        loginBtn.setBounds(340, 240, 100, 35);
+        loginBtn.setBounds(340, 240, 100, 28);
         loginBtn.setFont(normalFont);
         loginBtn.addActionListener(this);
         loginBtn.setCursor(handCursor);
@@ -138,13 +136,13 @@ public class Login extends JFrame implements ActionListener, MouseListener {
         if (e.getSource() == resetPass) {
             setVisible(false);
             ResetPassword resetPassword = new ResetPassword();
-//            resetPassword.setVisible(true);
+            resetPassword.setVisible(true);
         }
 
         if (e.getSource() == register) {
             setVisible(false);
             Register register = new Register();
-//            register.setVisible(true);
+            register.setVisible(true);
         }
     }
 
