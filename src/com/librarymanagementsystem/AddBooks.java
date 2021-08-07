@@ -168,8 +168,6 @@ public class AddBooks extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         try{
             DbCon con = new DbCon();
-//
-//            if(event.getSource() == registerBtn){
 
                 String bookName = nameField.getText().toLowerCase();
 
@@ -208,7 +206,6 @@ public class AddBooks extends JFrame implements ActionListener {
                 pagesField.setText("");
                 priceField.setText("");
 
-//            }
 
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error occurred! Try again later");

@@ -8,9 +8,11 @@ import java.awt.event.ActionListener;
 
 public class Home extends JFrame implements ActionListener {
 
-    private JPanel homePanel;
-    private JButton addBookBtn, issueBookBtn, returnBookBtn, addStuBtn, staticBtn;
-    private JLabel addBookLbl, addStuLbl, staticLbl, issueBookLbl, returnBookLbl;
+    private final JButton addBookBtn;
+    private final JButton issueBookBtn;
+    private final JButton returnBookBtn;
+    private final JButton addStuBtn;
+    private final JButton staticBtn;
 
     public Home() {
         Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
@@ -23,7 +25,7 @@ public class Home extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
 
         // panel settings
-        homePanel = new JPanel(new GridLayout(2, 1));
+        JPanel homePanel = new JPanel(new GridLayout(2, 1));
         homePanel.setBackground(new Color(242, 242, 247));
         setContentPane(homePanel);
         homePanel.setLayout(null);
@@ -68,7 +70,7 @@ public class Home extends JFrame implements ActionListener {
         // add book
         ImageIcon bookImg = new ImageIcon(ClassLoader.getSystemResource("com/librarymanagementsystem/images/book.png"));
 
-        addBookLbl = new JLabel("");
+        JLabel addBookLbl = new JLabel("");
         addBookLbl.setVerticalAlignment(SwingConstants.CENTER);
         addBookLbl = new JLabel(bookImg);
         addBookLbl.setBounds(100, 100, 150, 150);
@@ -87,7 +89,7 @@ public class Home extends JFrame implements ActionListener {
         // add students
         ImageIcon stuImg = new ImageIcon(ClassLoader.getSystemResource("com/librarymanagementsystem/images/student.png"));
 
-        addStuLbl = new JLabel("");
+        JLabel addStuLbl = new JLabel("");
         addStuLbl.setVerticalAlignment(SwingConstants.CENTER);
         addStuLbl = new JLabel(stuImg);
         addStuLbl.setBounds(320, 100, 150,150);
@@ -106,7 +108,7 @@ public class Home extends JFrame implements ActionListener {
         // statics
         ImageIcon statImg = new ImageIcon(ClassLoader.getSystemResource("com/librarymanagementsystem/images/analytics.png"));
 
-        staticLbl = new JLabel("");
+        JLabel staticLbl = new JLabel("");
         staticLbl.setVerticalAlignment(SwingConstants.CENTER);
         staticLbl = new JLabel(statImg);
         staticLbl.setBounds(540, 100, 150,150);
@@ -125,7 +127,7 @@ public class Home extends JFrame implements ActionListener {
         // issue books
         ImageIcon issueImg = new ImageIcon(ClassLoader.getSystemResource("com/librarymanagementsystem/images/library.png"));
 
-        issueBookLbl = new JLabel("");
+        JLabel issueBookLbl = new JLabel("");
         issueBookLbl.setVerticalAlignment(SwingConstants.CENTER);
         issueBookLbl = new JLabel(issueImg);
         issueBookLbl.setBounds(200, 340, 150,150);
@@ -144,7 +146,7 @@ public class Home extends JFrame implements ActionListener {
         // return books
         ImageIcon returnImg = new ImageIcon(ClassLoader.getSystemResource("com/librarymanagementsystem/images/clock.png"));
 
-        returnBookLbl = new JLabel("");
+        JLabel returnBookLbl = new JLabel("");
         returnBookLbl.setVerticalAlignment(SwingConstants.CENTER);
         returnBookLbl = new JLabel(returnImg);
         returnBookLbl.setBounds(400, 340, 150,150);
@@ -185,8 +187,8 @@ public class Home extends JFrame implements ActionListener {
         }
 
         if (event.getSource() == addStuBtn) {
-//            this.setVisible(false);
-//            new AddStudents().setVisible(true);
+            this.setVisible(false);
+            new AddStudents().setVisible(true);
         }
 
         if (event.getSource() == staticBtn) {
