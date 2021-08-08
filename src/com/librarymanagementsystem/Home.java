@@ -168,10 +168,10 @@ public class Home extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         if (event.getActionCommand().equals("Book details")) {
             setVisible(false);
-//            new BookDetails().setVisible(true);
+            new BookDetails().setVisible(true);
         } else if (event.getActionCommand().equals("Student details")) {
             setVisible(false);
-//            new StudentDetails().setVisible(true);
+            new StudentDetails().setVisible(true);
         }
 
         if (event.getActionCommand().equals("Exit")) {
@@ -197,13 +197,13 @@ public class Home extends JFrame implements ActionListener {
         }
 
         if (event.getSource() == issueBookBtn) {
-//            this.setVisible(false);
-//            new IssueBook().setVisible(true);
+            this.setVisible(false);
+            new IssueBooks().setVisible(true);
         }
 
         if (event.getSource() == returnBookBtn) {
-//            this.setVisible(false);
-//            new ReturnBook().setVisible(true);
+            this.setVisible(false);
+            new ReturnBook().setVisible(true);
         }
 
 

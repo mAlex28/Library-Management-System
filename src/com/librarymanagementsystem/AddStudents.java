@@ -10,10 +10,10 @@ import java.sql.PreparedStatement;
 
 public class AddStudents extends JFrame implements ActionListener {
 
-    private JLabel fnameLbl, lnameLbl, courseLbl, branchLbl, yearLbl, phoneLbl, back;
-    private JTextField fnameField, lnameField, yearField, phoneField;
-    private JComboBox branchBx, courseBx;
-    private JPanel addStudentsPanel;
+    private final JLabel fnameLbl, lnameLbl, courseLbl, branchLbl, yearLbl, phoneLbl, back;
+    private final JTextField fnameField, lnameField, yearField, phoneField;
+    private final JComboBox branchBx, courseBx;
+    private final JPanel addStudentsPanel;
 
     public AddStudents() {
         Font normalFont = new Font("Helvetica", Font.PLAIN, 14);
@@ -106,16 +106,16 @@ public class AddStudents extends JFrame implements ActionListener {
         phoneField.setBounds(360, 305, 200, 30);
         phoneField.setFont(normalFont);
 
-        // add book button
-        JButton addBookBtn = new JButton("Register");
-        addBookBtn.setForeground(new Color(239, 233, 244));
-        addBookBtn.setBackground(new Color(10, 132, 255));
-        addBookBtn.setOpaque(true);
-        addBookBtn.setBorderPainted(false);
-        addBookBtn.setBounds(340, 360, 100, 28);
-        addBookBtn.setFont(normalFont);
-        addBookBtn.addActionListener(this);
-        addBookBtn.setCursor(handCursor);
+        // add student button
+        JButton addStudBtn = new JButton("Register");
+        addStudBtn.setForeground(new Color(239, 233, 244));
+        addStudBtn.setBackground(new Color(10, 132, 255));
+        addStudBtn.setOpaque(true);
+        addStudBtn.setBorderPainted(false);
+        addStudBtn.setBounds(340, 360, 100, 28);
+        addStudBtn.setFont(normalFont);
+        addStudBtn.addActionListener(this);
+        addStudBtn.setCursor(handCursor);
 
         // back label
         back = new JLabel("Go back");
@@ -156,7 +156,7 @@ public class AddStudents extends JFrame implements ActionListener {
         addStudentsPanel.add(yearField);
         addStudentsPanel.add(phoneLbl);
         addStudentsPanel.add(phoneField);
-        addStudentsPanel.add(addBookBtn);
+        addStudentsPanel.add(addStudBtn);
         addStudentsPanel.add(back);
     }
 
